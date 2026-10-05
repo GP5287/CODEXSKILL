@@ -6,17 +6,17 @@
 ## 使用原則
 
 僅使用免費方案，不查詢付費資格、不升級。此儲存庫為公開儲存庫。
-以下文件保存啟用需求；文件提交不等於 GitHub 安全設定已啟用。
+已於 GitHub 儲存庫安全設定頁實際確認與設定；下列狀態記錄 2026-10-06 的結果。
 
 ## 三項安全功能
 
 | 功能 | 用途 | 目前狀態 |
 |---|---|---|
-| Secret Scanning / Push Protection | 偵測已提交的受支援 secrets，並在推送時阻擋可識別的 secrets | 尚未驗證設定；需在 GitHub 儲存庫設定確認與啟用 |
-| Dependabot | 已知依賴漏洞警示及安全更新 PR；按套件管理器設定版本更新 | 待啟用 alerts / security updates；目前尚無依賴清單，之後依實際專案建立 dependabot.yml |
-| CodeQL / Code Scanning | 分析支援語言的程式碼漏洞 | 待啟用 Default setup；目前尚無程式碼，不宣稱掃描已成功 |
+| Secret Scanning / Push Protection | 偵測已提交的受支援 secrets，並在推送時阻擋可識別的 secrets | 已確認 Secret Protection 與 Push protection 均啟用（原本已開啟） |
+| Dependabot | 已知依賴漏洞警示及安全更新 PR；按套件管理器設定版本更新 | 已啟用 Dependency graph、Dependabot alerts、Dependabot security updates；尚無依賴清單，version updates 待加入依賴後設定 |
+| CodeQL / Code Scanning | 分析支援語言的程式碼漏洞 | 已啟用 Default setup（預設高精確度查詢）；尚無支援語言，GitHub 會於 main 出現支援語言後自動執行首次掃描 |
 
-## 啟用步驟
+## 設定與後續步驟
 
 1. 開啟儲存庫 Settings 的安全設定頁。
 2. 確認 Secret Scanning 已啟用，啟用 Push Protection。
